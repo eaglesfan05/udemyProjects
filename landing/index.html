@@ -19,19 +19,30 @@
     <title>App Landing Page</title>
   </head>
   <style>
-    .logo {
-      /* z-index: 5; */
-    }
+    /* .container {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    } */
   </style>
   <body>
-    <div class="container-fluid">
-      <div class="jumbotron">
+    <div class="jumbotron">
+      <div class="container">
+        <!-- create logo -->
         <div>
-          <img
-            src="assets/images/LogoMakr_1QkyaT.png"
-            class="logo"
-            alt="plane"
-          />
+          <img src="assets/images/whiteplane.png" class="logo" alt="plane" />
+        </div>
+        <div class="featured">
+          <div class="row">
+            <!-- row using grid sytem. limit space taken by featured content. only 9 columns for med and lrg devices -->
+            <div class="col-md-9">
+              <h1>Best Holiday Finder App</h1>
+              <p>
+                Find your next holiday destination using our app! <br />Compare
+                offers and save your hard earned money for your trip
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
