@@ -1,0 +1,182 @@
+html {
+  /* in order to see circular gradient have to give the page a height. */
+  height: 100vh;
+  background: radial-gradient(circle, white, grey);
+}
+#container {
+  height: 600px;
+  width: 750px;
+  background-color: #99ceec;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 10px;
+  /* 1 horizontal offset puts shadow left if positive. 
+    2 vertical offset shadow at bottom if positive */
+  /* 3 blur radius the lower the px the sharper it looks */
+  /* 4 option spread radius makes shadow bigger */
+  /* 5 color  */
+  box-shadow: 0px 4px 0px #213d61;
+  position: relative;
+}
+
+#score {
+  background-color: #f3f78f;
+  color: #316187;
+  padding: 11px;
+  position: absolute;
+  left: 700px;
+  box-shadow: 0px 4px #9da853;
+}
+
+#correct {
+  position: absolute;
+  left: 260px;
+  background-color: limegreen;
+  color: white;
+  padding: 11px;
+  display: none;
+}
+
+#wrong {
+  position: absolute;
+  left: 250px;
+  background-color: red;
+  color: white;
+  padding: 11px;
+  display: none;
+}
+
+#fruitcontainer {
+  width: 650px;
+  height: 400px;
+  margin: 50px auto 10px auto;
+  background-color: white;
+  box-shadow: 0px 4px #5060a6;
+  font-size: 100px;
+  text-align: center;
+  font-family: cursive, sans-serif;
+  color: black;
+  position: relative;
+  overflow: hidden;
+}
+
+#instructions {
+  width: 450px;
+  height: 50px;
+  background-color: #b78adc;
+  box-shadow: 0px 4px #9c6fc1;
+  margin: 10px auto;
+  text-align: center;
+  /* to align height vertically */
+  line-height: 45px;
+}
+
+#choices {
+  width: 450px;
+  height: 100px;
+  margin: 5px auto;
+}
+
+.box {
+  width: 85px;
+  height: 85px;
+  background-color: white;
+  float: left;
+  margin-right: 36px;
+  border-radius: 3px;
+  /* change to pointer when hover */
+  cursor: pointer;
+  /* rgba is black made transparent to make a gray color */
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+
+  text-align: center;
+  line-height: 80px;
+  position: relative;
+  transition: all 0.3;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+}
+.box:hover,
+#start_reset:hover {
+  background-color: #9c89f6;
+  color: white;
+  box-shadow: 0px 4px #6b54d3;
+}
+
+.box:active,
+#start_reset:hover {
+  box-shadow: 0px 0px #6b54d3;
+  top: 4px;
+}
+#box4 {
+  margin-right: 0;
+}
+
+#start_reset {
+  width: 78px;
+
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.5);
+  /* change to pointer when hover */
+  cursor: pointer;
+  /* rgba is black made transparent to make a gray color */
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+
+  text-align: center;
+
+  position: relative;
+  transition: all 0.3;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+}
+#trialsleft {
+  width: 80px;
+  padding: 10px;
+  position: absolute;
+
+  background-color: #f3f78f;
+  border-radius: 3px;
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+  /* to hide box until needed */
+  /* visibility: hidden; */
+  display: none;
+}
+
+#gameover {
+  height: 200px;
+  width: 500px;
+  background: linear-gradient(#ffc08b, #ff7b6b);
+  color: white;
+  font-size: 2.5em;
+  text-align: center;
+  text-transform: uppercase;
+  position: absolute;
+  top: 170px;
+  left: 145px;
+  /* makes sure that div appears on top of other elements */
+  z-index: 5;
+  display: none;
+}
+
+.lives {
+  width: 16px;
+  width: 16px;
+  margin: 0 5px;
+}
+
+.fruit {
+  display: none;
+  position: absolute;
+}

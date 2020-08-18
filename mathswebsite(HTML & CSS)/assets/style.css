@@ -1,0 +1,218 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+h1 a {
+  font-size: 50px;
+  font-weight: 100;
+  color: #8f4abc;
+  text-decoration: none;
+}
+
+#searchbox {
+  flex: 50%;
+  background: linear-gradient(#d5e796, #badc55);
+  background: -webkit-linear-gradient(#d5e796, #badc55);
+  background: -moz-linear-gradient(#d5e796, #badc55);
+  background: -o-linear-gradient(#d5e796, #badc55);
+  min-width: 400px;
+  /* height: 50px; */
+  padding: 20px;
+  /* margin-top: 10px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#title {
+  flex: 50%;
+  min-width: 400px;
+}
+
+#header {
+  /* height: 100px; */
+  padding: 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.text {
+  float: left;
+  width: 200px;
+
+  padding: 5px;
+  font-size: 15px;
+  color: #ec8f23;
+  background: white url(images/search.png) right center no-repeat;
+  border: 1px solid #c8d03e;
+}
+
+.submit {
+  float: right;
+  padding: 5px;
+  font-weight: bold;
+  color: white;
+  background: #8f4abc;
+  font-size: 15px;
+}
+
+.clear {
+  clear: both;
+}
+
+#menu {
+  /* height: 70px; */
+  background: linear-gradient(#f5e982, #d8cc31);
+  background: -webkit-linear-gradient(#f5e982, #d8cc31);
+  background: -moz-linear-gradient(#f5e982, #d8cc31);
+  background: -o-linear-gradient(#f5e982, #d8cc31);
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#menu a {
+  padding: 0 30px;
+  height: 30px;
+  border-right: 1px solid #5d12e7;
+}
+
+/*to get rid of border for end link*/
+#menu a:last-child {
+  border-right: none;
+}
+
+#menu a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 17px;
+  color: #5d12e7;
+  line-height: 30px;
+  transition: font-size 0.5s ease;
+  -webkit-transition: font-size 0.5s ease;
+  -moz-transition: font-size 0.5s ease;
+  -o-transition: font-size 0.5s ease;
+  -ms-transition: font-size 0.5s ease;
+}
+
+#menu a:hover,
+#menu a.active {
+  font-size: 20px;
+  font-weight: bold;
+  color: #c34fdb;
+}
+
+/* small screens: vertical menu */
+@media screen and (max-width: 700px) {
+  #menu {
+    flex-direction: column;
+    align-content: center;
+  }
+  #menu a {
+    border-right: none;
+  }
+}
+#introduction {
+  background: linear-gradient(#d6e89a, #bfde61);
+  background: -webkit-linear-gradient(#d6e89a, #bfde61);
+  background: -moz-linear-gradient(#d6e89a, #bfde61);
+  background: -o-linear-gradient(#d6e89a, #bfde61);
+  padding: 30px;
+  margin: 16px 0;
+}
+
+#introduction h3 {
+  font-size: 45px;
+  color: #4c7a33;
+  font-weight: normal;
+}
+
+#introduction p {
+  font-size: 25px;
+  color: #7ca143;
+  text-align: justify;
+}
+.sidebars {
+  display: flex;
+  flex-wrap: wrap;
+}
+.sidebarwrapper {
+  flex: 50%;
+  padding: 5px;
+}
+.sidebar {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #e7d0ae;
+  border-radius: 20px;
+  padding: 10px 30px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: #5d12e7;
+}
+
+.sidebar ul {
+  padding-top: 8px;
+}
+
+#leftsidebar ul li {
+  padding: 2px 0 2px 10px;
+  list-style-image: url(images/arrow.png);
+}
+
+#rightsidebar ul li {
+  padding: 20px 0 20px 50px;
+  background: url(images/check2.png) no-repeat left center;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+  text-decoration: none;
+  color: #c34fdb;
+  font-size: 23px;
+  font-weight: bold;
+  transition: font-size 0.5s ease;
+  -webkit-transition: font-size 0.5s ease;
+  -moz-transition: font-size 0.5s ease;
+  -o-transition: font-size 0.5s ease;
+  -ms-transition: font-size 0.5s ease;
+}
+
+/* #leftsidebar {
+  float: left;
+}
+
+#rightsidebar {
+  float: right;
+} */
+
+.sidebar h3 {
+  color: #b314db;
+  font-size: 25px;
+}
+
+.footer {
+  height: 60px;
+  background: linear-gradient(#f6ea82, #e7db58);
+  background: -webkit-linear-gradient(#f6ea82, #e7db58);
+  background: -moz-linear-gradient(#f6ea82, #e7db58);
+  background: -o-linear-gradient(#f6ea82, #e7db58);
+  padding: 10px 30px;
+  margin-top: auto;
+}
