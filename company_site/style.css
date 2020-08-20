@@ -1,16 +1,91 @@
 /* style body by adding background image set to cover, add font family to body element */
-
+body {
+  font-family: "Arvo", serif;
+  background: url(https://cdn.pixabay.com/photo/2020/05/20/06/47/rome-5195046_1280.jpg)
+    no-repeat center center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+}
 /* style brand image */
+.logo {
+  height: 30px;
+}
 /* style nav to add colors and hover state */
+.navbar-dark {
+  background: rgba(0, 0, 0, 0.5);
+}
 
+.nav li {
+  color: white;
+  font-size: 17px;
+  margin-right: 35px;
+  padding: 10px 0;
+}
+
+/* style li on hover */
+.nav li:hover {
+  border-bottom: 1px solid #2ac8ae;
+  padding-bottom: 9px;
+  cursor: pointer;
+}
+h1 {
+  font-size: 60px;
+}
 /* style jumbotron */
-
+.jumbotron {
+  /* margin-top: 50px; */
+  background-color: transparent;
+  text-align: center;
+  color: white;
+  margin: 0;
+  padding: 10px;
+  letter-spacing: 2.5px;
+}
+.icon {
+  height: 100px;
+}
+.icons p {
+  font-size: 15px;
+}
 /* limit width of icon section */
+.row {
+  max-width: 75%;
+  margin: 0 auto;
+}
+
+.contact {
+  margin-top: 30px;
+  margin-bottom: 100px;
+}
+.btn {
+  background-color: rgba(42, 200, 174, 0.5);
+
+  border-radius: 10px;
+  color: white;
+  border: none;
+  font-size: 18px;
+  padding: 10px 70px;
+  letter-spacing: 1.3px;
+}
 
 /* style icon section using bootstrap grid system*/
 
 /* style contact button */
-
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+}
 /* style footer */
-
+.footer {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: grey;
+  padding: 10px 0;
+}
 /* use media queries to change icon size in small devices */
+@media (max-width: 768px) {
+  .icon {
+    height: 70px;
+  }
+}
