@@ -3,3 +3,19 @@ body {
   background-size: cover;
   color: white;
 }
+
+/* title */
+#header {
+  text-align: center;
+  font-size: 7vw;
+}
+
+#lap {
+  text-align: right;
+  font-size: 4vw;
+}
+
+#time {
+  text-align: center;
+  font-size: 10vw;
+}
