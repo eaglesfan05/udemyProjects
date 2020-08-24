@@ -19,3 +19,26 @@ body {
   text-align: center;
   font-size: 10vw;
 }
+
+/* buttons */
+#controlContainer {
+  margin-bottom: 100px;
+}
+
+.control {
+  color: white;
+  background-color: #d7a04e;
+  /* to make div circular */
+  height: 10vw;
+  width: 10vw;
+  border-radius: 100%;
+  text-align: center;
+  padding: 20% 0;
+  font-size: 2.5vw;
+  cursor: pointer;
+}
+
+.control:active {
+  background-color: white;
+  color: #d7a04e;
+}
