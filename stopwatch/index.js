@@ -36,20 +36,39 @@ $(function () {
   // CLICK STOP
   // show resume and reset buttons
   // stop counter
-  $("#stopButton").click(function () {});
+  $("#stopButton").click(function () {
+    hideShowButtons("#resumeButton", "#resetButton");
+    // stop counter
+    clearInterval(action);
+  });
   //  CLICK RESUME
   // show stop and lap buttons
   // start action
-
+  $("#resumeButton").click(function () {
+    hideShowButtons("#stopButton", "#lapButton");
+    startAction();
+  });
   // CLICK RESET
-  // reload the page
 
+  $("#resetButton").click(function () {
+    // reload the page
+    location.reload();
+  });
   // CLICK ON LAP BUTTON
   //if mode is ON
-  // stop action
-  // reset lap and print lap details
-  // start action
 
+  // start action
+  $("#lapButton").click(function () {
+    if (mode) {
+      addLap();
+      // stop action
+      clearInterval(action);
+      // reset lap and print lap details
+      lapCounter = 0;
+
+      startAction();
+    }
+  });
   // Functions
   //   shows 2 buttons
   function hideShowButtons(x, y) {
@@ -81,7 +100,7 @@ $(function () {
     timeCentiseconds = (timeCounter % 6000) % 100;
     //1 min = 60*100centiseconds = 6000 centiseconds
     //  lap counter
-    laptimeMinutes = Math.floor(lapCounter / 6000);
+    lapMinutes = Math.floor(lapCounter / 6000);
     // 1sec = 100 centiseconds
     lapSeconds = Math.floor((lapCounter % 6000) / 100);
     lapCentiseconds = (lapCounter % 6000) % 100;
@@ -102,5 +121,33 @@ $(function () {
     } else {
       return number;
     }
+  }
+  //   addLap Function: print lap details inside lap box
+  function addLap() {
+    lapNumber++;
+    var myLapDetails =
+      "<div class='lap'> <div class='laptimeTitle'> Lap" +
+      lapNumber +
+      "</div>" +
+      "<div class='laptime'>" +
+      "<span>" +
+      format(lapMinutes) +
+      "</span>" +
+      ":<span>" +
+      format(lapSeconds) +
+      "</span>" +
+      ":<span>" +
+      format(lapCentiseconds) +
+      "</span>";
+    "</div>" + "</div>";
+
+    // "<div>" + "<div>" + "Lap" + lapNumber;
+    // ("</div>");
+    // "<div>" + "<span>" + format(lapMinutes) + "</span>";
+    // ":<span>" + format(lapSeconds) + "</span>";
+    // ":<span>" + format(lapCentiseconds) + "</span>";
+    // ("</div>");
+    // ("</div>");
+    $(myLapDetails).prependTo("#laps");
   }
 });
