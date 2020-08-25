@@ -42,3 +42,8 @@ body {
   background-color: white;
   color: #d7a04e;
 }
+
+#laps {
+  max-height: 270px;
+  overflow-y: scroll;
+}
