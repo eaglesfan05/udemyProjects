@@ -24,7 +24,17 @@ $(function () {
   // mouse position
   var mouse = { x: 0, y: 0 };
   // onload load saved work from localStorage
-
+  if (localStorage.getItem("imageCanvas") != null) {
+    //    create image then draw inside canvas
+    // 1st create new image
+    var image = new Image();
+    // 2 use onload method
+    image.onload = function () {
+      ctx.drawImage(image, 0, 0);
+    };
+    // set source of image to value of variable aka the dataURL
+    image.src = localStorage.getItem("imageCanvas");
+  }
   // set drawing parameters (lineWidth, lineJoin, lineCap)
   ctx.lineWidth = 3;
   ctx.lineJoin = "round";
@@ -46,7 +56,7 @@ $(function () {
     if (paint == true) {
       if (paint_erase == "paint") {
         // get color input change with strokeStyle
-        ctx.strokeStyle = "red";
+        ctx.strokeStyle = $("#paintColor").val();
       } else {
         // color white
         ctx.strokeStyle = "white";
@@ -64,7 +74,22 @@ $(function () {
     paint = "false";
   });
   // click on reset button
+  $("#reset").click(function () {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    paint_erase = "paint";
+    localStorage.removeItem("imageCanvas");
+    $("#erase").removeClass("eraseMode");
+  });
   // click on save button
+  $("#save").click(function () {
+    if (typeof localStorage != null) {
+      // canvas refers to canvas element
+      localStorage.setItem("imageCanvas", canvas.toDataURL());
+    } else {
+      alert("Browser does not support localstorage.");
+    }
+  });
+
   // click on erase button
   $("#erase").click(function () {
     if (paint_erase == "paint") {
@@ -75,6 +100,18 @@ $(function () {
     $(this).toggleClass("eraseMode");
   });
   // change color input
+  $("#paintColor").change(function () {
+    $("#circle").css("background-color", $(this).val());
+  });
+
   // change lineWidth using slider
-  // functions
+  $("#slider").slider({
+    min: 3,
+    max: 30,
+    slide: function (event, ui) {
+      $("#circle").height(ui.value);
+      $("#circle").width(ui.value);
+      ctx.lineWidth = ui.value;
+    },
+  });
 });
