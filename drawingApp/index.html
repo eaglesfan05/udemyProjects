@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- jQuery UI  -->
+    <link
+      rel="stylesheet"
+      href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/start/jquery-ui.css"
+    />
+
+    <!-- Bootstrap CSS -->
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    /> -->
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Drawing App</title>
+  </head>
+  <body>
+    <div id="header">Drawing App</div>
+    <!-- input -->
+    <div class="inputContainer">
+      <!-- color input -->
+      <div class="input" id="colorInput">
+        <input type="color" list id="paintColor" />
+      </div>
+      <div class="input" id="thicknessInput">
+        <div id="circle"></div>
+      </div>
+      <!-- size -->
+      <div class="input">
+        <div id="slider"></div>
+      </div>
+    </div>
+    <!-- canvas container  -->
+    <div id="canvasContainer">
+      <canvas id="paint" width="500px" height="400px"></canvas>
+    </div>
+    <!-- buttons -->
+    <div class="inputContainer2">
+      <!-- erase -->
+      <div class="input2">
+        <span id="erase" class="button">Erase</span>
+      </div>
+      <!-- save -->
+      <div class="input2">
+        <span id="save" class="button">Save</span>
+      </div>
+      <!-- reset -->
+      <div class="input2">
+        <span id="reset" class="button">Reset</span>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
